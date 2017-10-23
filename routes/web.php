@@ -11,8 +11,10 @@
 |
 */
 
-Route::get('/', function () {
+/*Route::get('/', function () {
     return view('welcome');
-});
+});*/
 
-
+Route::get('/','StaticPagesContraoller@home');
+Route::get('/help','StaticPagesContraoller@help');
+Route::get('/about','StaticPagesContraoller@about');
