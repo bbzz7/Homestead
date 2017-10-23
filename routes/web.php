@@ -15,6 +15,6 @@
     return view('welcome');
 });*/
 
-Route::get('/aa', 'StaticPagesController@home');
+Route::get('/bb', 'StaticPagesController@home');
 Route::get('/help', 'StaticPagesController@help');
 Route::get('/about', 'StaticPagesController@about');
