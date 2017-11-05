@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Sample App</title>
+    <title>@yield('title','Weibo App')- Laravel</title>
+    <link rel="stylesheet" href="/css/app.css">
 </head>
 <body>
-@yield('content')
-@section('test')
-    <p>test</p>
-@show
+@include('layouts._header')
+<div class="container">
+    @yield('content')
+</div>
+@include('layouts._footer')
 </body>
 </html>
