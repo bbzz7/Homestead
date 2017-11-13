@@ -41,8 +41,9 @@ return [
 
         'mysql' => [
             'driver' => 'mysql',
-            'host' => env('DB_HOST', '127.0.0.1'),
-            'port' => env('DB_PORT', '33060'),
+            // 'host' => env('DB_HOST', 'localhost'),
+            'host' => env('DB_HOST', '127.0.0.1') . ('homestead' == gethostname() ? null : ':33060'),
+            // 'port' => env('DB_PORT', '33060'),
             'database' => env('DB_DATABASE', 'weibo'),
             'username' => env('DB_USERNAME', 'homestead'),
             'password' => env('DB_PASSWORD', 'secret'),
