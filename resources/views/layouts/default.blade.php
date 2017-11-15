@@ -11,6 +11,8 @@
     <div class="col-md-offset-1 col-md-10">
         @include('shared._messages')
         @yield('content')
+    </div>
+    <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10 col-md-offset-1">
         @include('layouts._footer')
     </div>
 </div>

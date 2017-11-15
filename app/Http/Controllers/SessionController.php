@@ -7,6 +7,12 @@ use Illuminate\Support\Facades\Auth;
 
 class SessionController extends Controller
 {
+    public function __construct() {
+        $this->middleware('guest',[
+           'only'=>['create'],
+        ]);
+    }
+
     //
     public function create() {
         // session(['login_web_59ba36addc2b2f9401580f014c7f58ea4e30989d' => 1]);
@@ -25,7 +31,7 @@ class SessionController extends Controller
             // dd(Auth::user());
             // dd(session()->all());
             session()->flash('success', '欢迎回来！');
-            return redirect()->route('users.show', [Auth::user()]);
+            return redirect()->intended(route('users.show', [Auth::user()]));
         } else {
             // dd(session()->all());
             session()->flash('danger', '很抱歉，您的邮箱和密码不匹配');
