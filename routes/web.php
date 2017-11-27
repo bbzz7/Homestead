@@ -25,6 +25,3 @@ Route::resource('users', 'UsersController');
 Route::get('login', 'SessionController@create')->name('login');
 Route::post('login', 'SessionController@store')->name('login');
 Route::delete('login', 'SessionController@destroy')->name('logout');
-Route::delete('login8', 'SessionController@destroy')->name('logout8');
-Route::delete('login11', 'SessionController@destroy')->name('logout11');
-Route::delete('login20', 'SessionController@destroy')->name('logout20');
